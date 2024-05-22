@@ -33,7 +33,7 @@ function App() {
   const addValue = () => {
     console.log("Add value Clicked...")
 
-    if (counter == 20) {
+    if (counter >= 20) {
       setErrMsg('Counter should not exceed 20');
     } else {
       // counter= counter+1;
@@ -46,7 +46,7 @@ function App() {
   const removeValue = () => {
     console.log("Remove value Clicked...")
 
-    if (counter == 0) {
+    if (counter <= 0) {
       setErrMsg('Counter cannot be decreased further...');
     } else {
 
