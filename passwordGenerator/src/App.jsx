@@ -42,6 +42,7 @@ function App() {
         pass += str.charAt(char);
       }
  
+      setPassword(pass); // Update the state with the generated password
     }
 
     , [length, isNumberAllowed, isCharAllowed, setPassword]/**dependencies -- teh basis on which ans will change */)
