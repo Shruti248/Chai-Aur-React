@@ -4,22 +4,20 @@ import { useEffect, useState } from 'react'
 // A function returnng some valeu & function whcih is in array 
 // standard approach -- hooks starts with use so we can name it with it -
 
-function useCurrencyInfo(currency) {
-    // API Call 
-    const [data , setData] = useState({});
+
+
+function useCurrencyInfo(currency){
+    const [data, setData] = useState({})
     useEffect(() => {
-        fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`).then((res) => {
-            res.json();
-        }).then((res) => {
-            setData(res[currency])
-        })
-
+        fetch(` https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
+        .then((res) => res.json())
+        .then((res) => setData(res[currency]))
         console.log(data);
-
-    } , [currency])
-
-    return data;
+    }, [currency])
+    console.log(data);
+    return data
 }
+
 
 // Since other hooks -- return the data & the method ---- 
 // heere we return teh dtaa fro teh function 
