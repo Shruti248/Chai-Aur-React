@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback , useEffect} from 'react'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -37,7 +37,7 @@ function App() {
 
       // Generate random password form thsi possible values of the password
       for (let i = 1; i <= length; i++) {
-        let char = floor(Math.random() * str.length + 1);
+        let char = Math.floor(Math.random() * str.length + 1);
 
         pass += str.charAt(char);
       }
@@ -46,6 +46,12 @@ function App() {
     }
 
     , [length, isNumberAllowed, isCharAllowed, setPassword]/**dependencies -- teh basis on which ans will change */)
+
+
+    // use effect -- any chage in teh depndencies -- re run the function ---- 
+    useEffect(() => {
+      passwordGenerator()
+    } , [length , isNumberAllowed , isCharAllowed , passwordGenerator])
 
   return (
     <>
