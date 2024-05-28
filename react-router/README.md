@@ -1,8 +1,11 @@
-# React + Vite
+<!-- Porps Drilling PROBLEM  -->
+<!--  https://freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/#:~:text=Prop%20drilling%20occurs%20when%20a,t%20use%20the%20prop%20itself. -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<!-- To solve thsi probelm -- context API Came into picture -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- COntext API is for recat only   -- so some state management libraries are also introduced -->
+
+<!-- REDUX / Zustand -- State Management Library -->
+<!-- React-REDUX -- used din react -->
+<!-- redux - tollkit --- easier version of redux -->
