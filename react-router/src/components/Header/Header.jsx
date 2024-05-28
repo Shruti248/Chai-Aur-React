@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link , NavLink} from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 // Link -- used in place of a tag -- page refreshes in teh a tag -- bt react does not do soo -- so we shoudl not use a tag -- we use Link tag so taht whoile page does not refreshes
 // NavLink -- provides addional things 
@@ -9,7 +9,7 @@ export default function Header() {
         <header className="shadow sticky z-50 top-0">
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <Link to="/" /** to is used instead of href*/className="flex items-center">
+                    <Link to="/" /** to is used instead of href*/ className="flex items-center">
                         <img
                             src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
                             className="mr-3 h-12"
@@ -38,8 +38,8 @@ export default function Header() {
                             <li>
 
                                 {/* In thsi navlink teh classes are written in a callback  -- thsi si bcoz the callback comes with some propererty like -- isActive --- it is used in tags such as if current tab is active or not -- it matches teh current tab with teh url & then accoring to the active tabs -- we can manipulate tyhe styles accordingly ---- soooo this is MOSTTT usefull - bcoz we often maniulate tehdesigns accoridng to the tabs which is active ----  */}
-                                <NavLink
-                                    className={({isActive}) =>
+                                <NavLink to="/"
+                                    className={({ isActive }) =>
                                         `block py-2 pr-4 pl-3 duration-200
                                         ${isActive ? "text-orange-700" : "text-gray-700"}
                                     border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
@@ -48,8 +48,32 @@ export default function Header() {
                                     Home
                                 </NavLink>
                             </li>
-                            
-                            
+                            <li>
+
+                                <NavLink to="/about"
+                                    className={({ isActive }) =>
+                                        `block py-2 pr-4 pl-3 duration-200
+        ${isActive ? "text-orange-700" : "text-gray-700"}
+    border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                                    About
+                                </NavLink>
+                            </li>
+
+                            <li>
+                                <NavLink to="/contact"
+                                    className={({ isActive }) =>
+                                        `block py-2 pr-4 pl-3 duration-200
+        ${isActive ? "text-orange-700" : "text-gray-700"}
+    border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }
+                                >
+                                    Contact
+                                </NavLink>
+                            </li>
+
+
                         </ul>
                     </div>
                 </div>
