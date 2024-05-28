@@ -11,3 +11,5 @@
 <!-- redux - tollkit --- easier version of redux -->
 
 <!-- COntext API --- Make global variable & send all teh data in global variable -- -->
+
+<!-- there cna be multiple ocntexts - user contexts -- product contexts -- login contexts etc  -->
