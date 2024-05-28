@@ -41,6 +41,15 @@ const router = createBrowserRouter(
       <Route path='contact'  element={<Contact/>}/>
       <Route path='user/:userId'  element={<User/>}/>
       <Route path='github'  element={<Github/>}/>
+
+      {/* In teh above method -- we make the API call inside the Github component that we built -- we make use of useEffect & then store teh data & dispay it */}
+
+      {/* Alternatively -- we can also make the API call i the Route intself -- using the loader --- more optimized approach  */}
+
+      {/* How loader optimizes -- when you hiver over the github link -- even before you click -- the event is fired & therefore it sends teh API requests instantly -- so it is faster -- then it also stores in the cache --- */}
+
+      {/* Hav enot implemneted as of now -- see video again if you need --  */}
+
     </Route>
 ))
 
