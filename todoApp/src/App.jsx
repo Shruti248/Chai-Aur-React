@@ -44,6 +44,19 @@ function App() {
     })
   }
 
+  // Local storage 
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos")) 
+
+    if(todos && todos.length > 0){
+      setTodos(todos)
+    }
+  } , [])
+
+  // Whenever there is change in todods - duirng create - update - or delete - thsi hook will update teh local storage with the latest todos 
+  useEffect(() => {
+    localStorage.setItem("todos" , JSON.stringify(todos))
+  } , [todos])
 
 
 
