@@ -1,0 +1,7 @@
+4 things in redux toolkit 
+
+1) STORE -- Global storage jya badho j data store thase
+2) REDUCERS -- store ma data ne manipulate karva reucers function j use thase hamesha 
+3) useSelector --- to fech data from the store 
+4) useDispatcher -- to add data to the store 
+
