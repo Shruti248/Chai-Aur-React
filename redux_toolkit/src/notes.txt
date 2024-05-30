@@ -5,3 +5,5 @@
 3) useSelector --- to fech data from the store 
 4) useDispatcher -- to add data to the store 
 
+https://www.freecodecamp.org/news/redux-and-redux-toolkit-for-beginners/ 
+https://www.freecodecamp.org/news/use-redux-toolkit-to-manage-state-in-react-apps/
